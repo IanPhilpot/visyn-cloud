@@ -7,6 +7,16 @@
   const menu=document.querySelector('.menu-button');const nav=document.querySelector('.site-nav');
   if(menu&&nav){menu.addEventListener('click',()=>{const open=nav.classList.toggle('open');menu.setAttribute('aria-expanded',String(open))});}
   document.querySelectorAll('[data-year]').forEach(node=>node.textContent=new Date().getFullYear());
+  const stack=document.querySelector('.tool-stack');
+  if(stack){
+    let startX=0,startY=0,moved=false,pointerActive=false;
+    const cycle=()=>{if(stack.classList.contains('is-cycling'))return;stack.classList.add('is-cycling');stack.append(stack.firstElementChild);window.setTimeout(()=>stack.classList.remove('is-cycling'),220)};
+    stack.addEventListener('pointerdown',event=>{startX=event.clientX;startY=event.clientY;moved=false;pointerActive=true;stack.setPointerCapture(event.pointerId)});
+    stack.addEventListener('pointermove',event=>{if(pointerActive&&Math.hypot(event.clientX-startX,event.clientY-startY)>12)moved=true});
+    stack.addEventListener('pointerup',()=>{pointerActive=false;if(moved)cycle()});
+    stack.addEventListener('click',()=>{if(!moved)cycle();moved=false});
+    stack.addEventListener('keydown',event=>{if(event.key==='Enter'||event.key===' '){event.preventDefault();cycle()}});
+  }
   const form=document.querySelector('#contact-form');
-  if(form){form.addEventListener('submit',event=>{event.preventDefault();const data=new FormData(form);const subject=`Visyn Cloud — ${data.get('topic')}`;const body=`Name: ${data.get('name')}\nEmail: ${data.get('email')}\n\n${data.get('message')}`;window.location.href=`mailto:cloud@visyn.studio?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`})}
+  if(form){form.addEventListener('submit',event=>{event.preventDefault();const data=new FormData(form);const subject=`Visyn Studio software — ${data.get('topic')}`;const body=`Name: ${data.get('name')}\nEmail: ${data.get('email')}\n\n${data.get('message')}`;window.location.href=`mailto:cloud@visyn.studio?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`})}
 })();

@@ -1,4 +1,4 @@
-# Visyn Cloud
+# Visyn Studio Software
 
 The public website for [visyn.cloud](https://visyn.cloud), built as a lightweight static site for GitHub Pages.
 
