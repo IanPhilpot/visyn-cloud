@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Help — Visyn Studio</title>
+  <meta name="description" content="Get help with Visyn Studio apps. Submit a support ticket and a real person will reply by email.">
+  <meta property="og:title" content="Help — Visyn Studio">
+  <meta property="og:description" content="Submit a support ticket and a real person will reply by email.">
+  <meta property="og:url" content="https://visyn.cloud/help.html">
+  <meta property="og:type" content="website">
+  <meta name="theme-color" content="#173d2a">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bagel+Fat+One&amp;family=Jost:wght@400..700&amp;family=Lora:ital,wght@0,400;0,600;1,400&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <script src="assets/js/site.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <a class="wordmark" href="/" aria-label="Visyn Studio software home"><span>visyn</span><b>.cloud</b></a>
+    <button class="menu-button" type="button" aria-expanded="false" aria-controls="site-nav"><span></span><span></span><span></span><span class="sr-only">Menu</span></button>
+    <nav class="site-nav" id="site-nav" aria-label="Main navigation">
+      <a href="/mixmaxxing.html">MixMaxxing</a><a aria-current="page" href="/help.html">Help</a><a href="/contact.html">Contact</a>
+      <button class="theme-button" type="button" aria-label="Switch color theme"><span aria-hidden="true">◐</span></button>
+    </nav>
+  </header>
+
+  <main id="main" class="help-page">
+    <div class="contact-page help-top">
+      <section class="contact-intro">
+        <p class="eyebrow"><span></span> Help &amp; support</p>
+        <h1>How can we help?</h1>
+        <p>Send us a ticket and it lands straight in our inbox. A real person reads every one and replies by email.</p>
+        <h2 class="help-subhead">To get you an answer faster, include:</h2>
+        <ul class="help-tips">
+          <li>Your store’s <strong>myshopify.com</strong> address</li>
+          <li>Which app, and what you were trying to do</li>
+          <li>What you expected, and what happened instead</li>
+          <li>Whether it happens every time, or only sometimes</li>
+        </ul>
+        <p class="help-direct">Prefer email? Write to <a href="mailto:hello@visyn.cloud">hello@visyn.cloud</a>.</p>
+      </section>
+
+      <!-- Ticket form. Submits to FormSubmit, which emails the ticket to
+           hello@visyn.cloud — see TICKET_ENDPOINT in assets/js/site.js.
+           If sending fails for any reason, the visitor is offered a
+           pre-filled email instead, so no ticket is ever lost silently. -->
+      <form class="contact-form" id="ticket-form">
+        <label for="ticket-name">Your name</label>
+        <input id="ticket-name" name="name" autocomplete="name" placeholder="Jordan Smith" required>
+
+        <label for="ticket-email">Email address</label>
+        <input id="ticket-email" name="email" type="email" autocomplete="email" placeholder="you@yourstore.com" required>
+
+        <label for="ticket-store">Store address <span class="optional">(optional)</span></label>
+        <input id="ticket-store" name="store" autocomplete="off" autocapitalize="off" spellcheck="false" placeholder="your-store.myshopify.com" aria-describedby="ticket-store-hint">
+        <p class="hint" id="ticket-store-hint">Find it in your Shopify admin under Settings › Domains.</p>
+
+        <label for="ticket-app">Which app?</label>
+        <select id="ticket-app" name="app">
+          <option value="MixMaxxing">MixMaxxing</option>
+          <option value="Not sure / something else">Not sure, or something else</option>
+        </select>
+
+        <label for="ticket-topic">What’s going on?</label>
+        <select id="ticket-topic" name="topic">
+          <option>Getting set up</option>
+          <option>Something isn’t working</option>
+          <option>Billing question</option>
+          <option>Feature request</option>
+          <option>Data or privacy request</option>
+          <option>Something else</option>
+        </select>
+
+        <label for="ticket-message">Tell us more</label>
+        <textarea id="ticket-message" name="message" rows="7" placeholder="What were you trying to do, and what happened instead?" required></textarea>
+
+        <div class="hp" aria-hidden="true"><label for="ticket-honey">Leave this empty</label><input id="ticket-honey" name="_honey" tabindex="-1" autocomplete="off"></div>
+
+        <button class="button button-primary" type="submit">Submit ticket</button>
+        <p class="form-status" role="status" aria-live="polite" hidden></p>
+        <p class="form-note">Your ticket is emailed to our team at hello@visyn.cloud. We’ll reply to the address you give above.</p>
+      </form>
+    </div>
+
+    <section class="help-faq" aria-labelledby="faq-heading">
+      <div>
+        <h2 id="faq-heading">Quick answers</h2>
+        <p>The questions we hear most. Not here? Submit a ticket above.</p>
+      </div>
+      <div class="faq">
+        <details>
+          <summary>Where do I find my myshopify.com address?</summary>
+          <p>In your Shopify admin, go to Settings › Domains. Your permanent address ends in .myshopify.com, and it stays the same even if your store uses a custom domain.</p>
+        </details>
+        <details>
+          <summary>Will you need access to my store?</summary>
+          <p>Sometimes, so we can see a problem for ourselves. We request collaborator access through Shopify, and nothing happens until you approve it. If we ask for a collaborator request code, you’ll find it under Settings › Users › Security. You can review or remove our access at any time from Settings › Users.</p>
+        </details>
+        <details>
+          <summary>How do I uninstall an app?</summary>
+          <p>In your Shopify admin, go to Settings › Apps, open the menu next to the app, and choose Uninstall. If something isn’t working, let us know first — it’s often a quick fix.</p>
+        </details>
+        <details>
+          <summary>How does billing work?</summary>
+          <p>Pricing, trials, and cancellation terms are shown before you install or buy, as set out in our <a class="text-link-plain" href="/terms.html">Terms</a>. If a charge looks wrong, submit a ticket with the “Billing question” topic and we’ll sort it out.</p>
+        </details>
+        <details>
+          <summary>Can I get a copy of my data, or have it deleted?</summary>
+          <p>Yes. Choose “Data or privacy request” above, or email us. We may need to confirm it’s really you before we act on it. Our <a class="text-link-plain" href="/privacy.html">Privacy policy</a> explains what we hold and why.</p>
+        </details>
+        <details>
+          <summary>I have an idea for a feature.</summary>
+          <p>We’d love to hear it. Pick “Feature request” and tell us what you’re trying to get done — the problem helps us more than a specific solution.</p>
+        </details>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <a class="wordmark wordmark-small" href="/"><span>visyn</span><b>.cloud</b></a>
+    <p>Thoughtful software from the Visyn Studio team.</p>
+    <nav><a href="/privacy.html">Privacy</a><a href="/terms.html">Terms</a><a href="/help.html">Help</a><a href="/contact.html">Contact</a></nav>
+    <p>© <span data-year></span> Visyn Studio.</p>
+  </footer>
+</body>
+</html>
