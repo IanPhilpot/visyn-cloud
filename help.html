@@ -1,10 +1,20 @@
 <!doctype html>
 <html lang="en" data-theme="light">
 <head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-VWW6HSXV5H"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-VWW6HSXV5H');
+</script>
+
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Help — Visyn Studio</title>
-  <meta name="description" content="Get help with Visyn Studio apps. Submit a support ticket and a real person will reply by email.">
+  <meta name="description" content="Get help with Visyn Studio apps. Submit a support ticket and a real person replies by email, in less than one business day on average.">
   <meta property="og:title" content="Help — Visyn Studio">
   <meta property="og:description" content="Submit a support ticket and a real person will reply by email.">
   <meta property="og:url" content="https://visyn.cloud/help.html">
@@ -32,7 +42,7 @@
       <section class="contact-intro">
         <p class="eyebrow"><span></span> Help &amp; support</p>
         <h1>How can we help?</h1>
-        <p>Send us a ticket and it lands straight in our inbox. A real person reads every one and replies by email.</p>
+        <p>Send us a ticket and it lands straight in our inbox. A real person reads every one and replies by email — in less than one business day, on average.</p>
         <h2 class="help-subhead">To get you an answer faster, include:</h2>
         <ul class="help-tips">
           <li>Your store’s <strong>myshopify.com</strong> address</li>
@@ -40,11 +50,11 @@
           <li>What you expected, and what happened instead</li>
           <li>Whether it happens every time, or only sometimes</li>
         </ul>
-        <p class="help-direct">Prefer email? Write to <a href="mailto:hello@visyn.cloud">hello@visyn.cloud</a>.</p>
+        <p class="help-direct">Prefer email? Write to <a href="mailto:cloud@visyn.studio">cloud@visyn.studio</a>.</p>
       </section>
 
       <!-- Ticket form. Submits to FormSubmit, which emails the ticket to
-           hello@visyn.cloud — see TICKET_ENDPOINT in assets/js/site.js.
+           cloud@visyn.studio — see TICKET_ENDPOINT in assets/js/site.js.
            If sending fails for any reason, the visitor is offered a
            pre-filled email instead, so no ticket is ever lost silently. -->
       <form class="contact-form" id="ticket-form">
@@ -81,7 +91,7 @@
 
         <button class="button button-primary" type="submit">Submit ticket</button>
         <p class="form-status" role="status" aria-live="polite" hidden></p>
-        <p class="form-note">Your ticket is emailed to our team at hello@visyn.cloud. We’ll reply to the address you give above.</p>
+        <p class="form-note">Your ticket is emailed to our team at cloud@visyn.studio. We reply in less than one business day on average, to the address you give above.</p>
       </form>
     </div>
 

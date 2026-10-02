@@ -20,13 +20,13 @@
   const form=document.querySelector('#contact-form');
   if(form){form.addEventListener('submit',event=>{event.preventDefault();const data=new FormData(form);const subject=`Visyn Studio software — ${data.get('topic')}`;const body=`Name: ${data.get('name')}\nEmail: ${data.get('email')}\n\n${data.get('message')}`;window.location.href=`mailto:cloud@visyn.studio?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`})}
   // ── Help page: support ticket ──────────────────────────────────────────
-  // Tickets are emailed to hello@visyn.cloud via FormSubmit. The FIRST
+  // Tickets are emailed to cloud@visyn.studio via FormSubmit. The FIRST
   // submission sends a one-time "Activate form" email to that inbox; tickets
   // are only delivered after that link is clicked. Until then — or if the
   // service is ever unreachable — the visitor is offered a pre-filled email
   // instead, so a ticket is never silently lost.
-  const TICKET_ENDPOINT='https://formsubmit.co/ajax/hello@visyn.cloud';
-  const TICKET_EMAIL='hello@visyn.cloud';
+  const TICKET_ENDPOINT='https://formsubmit.co/ajax/cloud@visyn.studio';
+  const TICKET_EMAIL='cloud@visyn.studio';
   const ticket=document.querySelector('#ticket-form');
   if(ticket){
     const appSelect=ticket.querySelector('#ticket-app');
@@ -55,7 +55,7 @@
         const json=await res.json().catch(()=>({}));
         if(!res.ok||String(json.success)!=='true')throw new Error(json.message||`HTTP ${res.status}`);
         ticket.reset();if(match)appSelect.value=match.value;
-        show('success',[document.createTextNode(`Thanks — your ticket is in. We’ll reply to ${data.email}.`)]);
+        show('success',[document.createTextNode(`Thanks — your ticket is in. We’ll reply to ${data.email}, in less than one business day on average.`)]);
       }catch(err){
         const link=document.createElement('a');link.href=mailto;link.textContent='Email it to us instead';
         show('error',[document.createTextNode('We couldn’t send that just now. '),link,
