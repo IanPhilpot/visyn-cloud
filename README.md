@@ -21,3 +21,10 @@ The privacy policy and terms are a practical first draft and should be reviewed 
 **One-time setup (per address):** FormSubmit activates each destination address separately. The first ticket submitted triggers an "Activate form" email to `cloud@visyn.studio`. Tickets are only delivered after that link is clicked. Until then — or if FormSubmit is ever unreachable — the page offers the visitor a pre-filled email instead, so nothing is lost silently.
 
 To move to a different form service later, change `TICKET_ENDPOINT` and the success check in the same block.
+
+## Logo
+
+`assets/img/logo/` holds the prism-V lockup, shown via two `<img>` tags per placement and swapped by `[data-theme]`:
+
+- `visyn-cloud-logo.svg` — supplied, byte-for-byte. Light theme.
+- `visyn-cloud-logo-dark-bg.svg` — **derived** from the file above by changing only the wordmark fill to `#FCFCFC`. Dark theme. The two "visyn-cloud" dark and mono files originally supplied spell "Visyn Studio", so they aren't used. Replace this one if an official dark version is produced.
