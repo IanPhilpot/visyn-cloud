@@ -16,3 +16,4 @@
 
 /* Dark-mode contrast fixes. All scoped to [data-theme=dark]; light mode is untouched. */[data-theme=dark] .tool-card:nth-child(2){--ink:#10291d;--muted:#1d4a30;--green:#1d6b38}[data-theme=dark] .manifesto{background:#173d2a;color:#f4f1df}[data-theme=dark] .closing,[data-theme=dark] .closing .eyebrow.light{color:#10291d}
 /* Form placeholders: browser default grey was under 4.5:1 in both themes. */.contact-form ::placeholder{color:var(--muted);opacity:1}
+/* SVG logo. Light file by default; dark file when the dark theme is on. */.wordmark{align-items:center}.wordmark img{display:block;height:36px;width:auto}.wordmark-small img{height:28px}.wordmark .logo-on-dark{display:none}[data-theme=dark] .wordmark .logo-on-light{display:none}[data-theme=dark] .wordmark .logo-on-dark{display:block}@media(max-width:760px){.wordmark img{height:30px}}
