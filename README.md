@@ -28,3 +28,15 @@ To move to a different form service later, change `TICKET_ENDPOINT` and the succ
 
 - `visyn-cloud-logo.svg` — supplied, byte-for-byte. Light theme.
 - `visyn-cloud-logo-dark-bg.svg` — **derived** from the file above by changing only the wordmark fill to `#FCFCFC`. Dark theme. The two "visyn-cloud" dark and mono files originally supplied spell "Visyn Studio", so they aren't used. Replace this one if an official dark version is produced.
+
+## Favicon
+
+The prism V, supplied as a square transparent PNG, built into:
+
+- `favicon.ico` at the site root: 16, 32 and 48px, for browser tabs.
+- `assets/img/favicon/favicon-192.png`: Android and high-density tabs.
+- `assets/img/favicon/apple-touch-icon.png`: 180px, the V on white with
+  padding, because iOS paints transparency black and rounds the corners.
+
+Every page links all three in `<head>`, after the Google tag. visyn.studio
+and visyn.cloud use the same files; replace both sets together.
